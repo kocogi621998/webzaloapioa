@@ -70,5 +70,6 @@ namespace ZaloDotNetSDK
         {
             return string.Format("{0}/{1}/{2}", APIConfig.DEFAULT_OA_API_BASE, APIConfig.DEFAULT_OA_API_VERSION, url);
         }
+        
     }
 }

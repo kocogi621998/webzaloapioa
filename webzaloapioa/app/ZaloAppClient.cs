@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 
 namespace ZaloDotNetSDK {
+
+
     public class ZaloAppClient : ZaloBaseClient {
         private ZaloAppInfo _appInfo;
 
@@ -136,12 +138,7 @@ namespace ZaloDotNetSDK {
                 throw new APIException(response);
             }
         }
-        class MyClass
-        {
-            public static void Main()
-            {
-            }
-        }
+
     }
 
 }

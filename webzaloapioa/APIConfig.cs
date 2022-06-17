@@ -18,5 +18,14 @@ namespace ZaloDotNetSDK {
             dictionary.Add("SDK-Source", SDK_SOURCE);
             return dictionary;
         }
+
     }
+    public class Program {
+        static void Main(string[] args)
+        {
+
+        }
+    }
+
+
 }

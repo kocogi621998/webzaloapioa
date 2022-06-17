@@ -2,11 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <OutputType>Exe</OutputType>
+    <LangVersion>latest</LangVersion>
+    <OutputType>Library</OutputType>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Version>1.1.8</Version>
     <UserSecretsId>aspnet-webzaloapioa-8B9E28CF-2EF8-46E0-B32D-722727D38AB1</UserSecretsId>
-    <StartupObject>ZaloCSharpSDK.Zalo3rdAppClient</StartupObject>
+    <StartupObject></StartupObject>
+    <PlatformTarget>x64</PlatformTarget>
+    <RootNamespace></RootNamespace>
+    <AssemblyName></AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

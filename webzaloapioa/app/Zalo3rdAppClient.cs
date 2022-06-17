@@ -137,11 +137,6 @@ namespace ZaloCSharpSDK {
                 throw new APIException(response);
             }
         }
-        class MyClass
-        {
-            public static void Main()
-            {
-            }
-        }
+
     }
     }
