@@ -1,5 +1,5 @@
 # webzaloapioa
-https://localhost:44353/webzaloapioa.csproj 
+
 #HTTP Error 404.7 - Not Found
 The request filtering module is configured to deny the file extension.
 
