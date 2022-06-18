@@ -6,15 +6,16 @@ using Newtonsoft.Json.Linq;
 using ZaloDotNetSDK;
 
 namespace ZaloCSharpSDK {
-    public class Zalo3rdAppClient : ZaloBaseClient {
-        private ZaloAppInfo _appInfo;
+    public class Zalo3rdAppClient : ZaloBaseClient 
+    {
+        private ZaloAppInfo appInfo;
 
-        public Zalo3rdAppClient(ZaloAppInfo _appInfo) {
-            this._appInfo = _appInfo;
+        public Zalo3rdAppClient(ZaloAppInfo appInfo) {
+            this.appInfo = appInfo;
         }
         private static string LOGIN_ENPOINT = "https://oauth.zaloapp.com/v3/auth?app_id={0}&redirect_uri={1}";
         public string getLoginUrl() {
-            return string.Format(LOGIN_ENPOINT, _appInfo.appId, _appInfo.callbackUrl);
+            return string.Format(LOGIN_ENPOINT, appInfo.appId, appInfo.callbackUrl);
         }
 
         private static string ACCESSTOKEN_ENPOINT = "https://oauth.zaloapp.com/v3/access_token";
@@ -22,8 +23,8 @@ namespace ZaloCSharpSDK {
             string response = "";
             try {
                 Dictionary<string, dynamic> param = new Dictionary<string, dynamic>();
-                param.Add("app_id", _appInfo.appId.ToString());
-                param.Add("app_secret", _appInfo.secretKey);
+                param.Add("app_id", appInfo.appId.ToString());
+                param.Add("app_secret", appInfo.secretKey);
                 param.Add("code", oauthCode);
                 response = sendHttpGetRequest(ACCESSTOKEN_ENPOINT, param, APIConfig.DEFAULT_HEADER);
                 return JObject.Parse(response);
